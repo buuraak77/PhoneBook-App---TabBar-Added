@@ -48,6 +48,17 @@ class ViewController: UIViewController {
         
     }
     
+    func searchPerson(person_name:String) {
+        let fetchRequest:NSFetchRequest<Person> = Person.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "person_name CONTAINS %@", person_name)
+        
+        do {
+            personList = try context.fetch(fetchRequest)
+        } catch  {
+            print(error.localizedDescription)
+        }
+    }
+    
 
 
 
@@ -120,6 +131,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, DetailButt
 }
 
 
+
+
 extension ViewController: UISearchBarDelegate {
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == "" {
+            getPerson()
+        }else {
+            searchPerson(person_name: searchText)
+        }
+        
+        tableView.reloadData()
+    }
     
 }
