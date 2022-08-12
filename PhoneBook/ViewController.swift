@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        self.hideKeyboardWhenTappedAround()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -65,6 +66,16 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         getPerson()
         tableView.reloadData()
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     
