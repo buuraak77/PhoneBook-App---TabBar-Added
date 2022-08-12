@@ -22,7 +22,6 @@ class DetailVC: UIViewController {
         if let person = gettingPerson {
             nameLabel.text = person.person_name
             numberLabel.text = person.person_number
-            imageView.image = UIImage(named: person.person_image!)
         }
         
         
