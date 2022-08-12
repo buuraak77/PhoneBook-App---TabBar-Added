@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65499B7F28A5706F00D5EBCF /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499B7E28A5706F00D5EBCF /* UpdateVC.swift */; };
 		65DFBE0828A50EC900FB314C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE0728A50EC900FB314C /* AppDelegate.swift */; };
 		65DFBE0A28A50EC900FB314C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE0928A50EC900FB314C /* SceneDelegate.swift */; };
 		65DFBE0C28A50EC900FB314C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE0B28A50EC900FB314C /* ViewController.swift */; };
 		65DFBE0F28A50EC900FB314C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DFBE0D28A50EC900FB314C /* Main.storyboard */; };
 		65DFBE1128A50EC900FB314C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65DFBE1028A50EC900FB314C /* Assets.xcassets */; };
 		65DFBE1428A50EC900FB314C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DFBE1228A50EC900FB314C /* LaunchScreen.storyboard */; };
+		65DFBE1C28A5109D00FB314C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE1B28A5109D00FB314C /* PersonTableViewCell.swift */; };
+		65DFBE1E28A5130E00FB314C /* CreatePersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE1D28A5130E00FB314C /* CreatePersonVC.swift */; };
+		65DFBE2228A5132700FB314C /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE2128A5132700FB314C /* DetailVC.swift */; };
+		65DFBE2828A521E400FB314C /* PhoneBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65DFBE2628A521E400FB314C /* PhoneBook.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65499B7E28A5706F00D5EBCF /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		65DFBE0428A50EC900FB314C /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DFBE0728A50EC900FB314C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65DFBE0928A50EC900FB314C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		65DFBE1028A50EC900FB314C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65DFBE1328A50EC900FB314C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65DFBE1528A50EC900FB314C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65DFBE1B28A5109D00FB314C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		65DFBE1D28A5130E00FB314C /* CreatePersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonVC.swift; sourceTree = "<group>"; };
+		65DFBE2128A5132700FB314C /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		65DFBE2728A521E400FB314C /* PhoneBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhoneBook.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 		65DFBDFB28A50EC900FB314C = {
 			isa = PBXGroup;
 			children = (
+				65DFBE2628A521E400FB314C /* PhoneBook.xcdatamodeld */,
 				65DFBE0628A50EC900FB314C /* PhoneBook */,
 				65DFBE0528A50EC900FB314C /* Products */,
 			);
@@ -60,6 +71,10 @@
 				65DFBE0928A50EC900FB314C /* SceneDelegate.swift */,
 				65DFBE0B28A50EC900FB314C /* ViewController.swift */,
 				65DFBE0D28A50EC900FB314C /* Main.storyboard */,
+				65499B7E28A5706F00D5EBCF /* UpdateVC.swift */,
+				65DFBE2128A5132700FB314C /* DetailVC.swift */,
+				65DFBE1D28A5130E00FB314C /* CreatePersonVC.swift */,
+				65DFBE1B28A5109D00FB314C /* PersonTableViewCell.swift */,
 				65DFBE1028A50EC900FB314C /* Assets.xcassets */,
 				65DFBE1228A50EC900FB314C /* LaunchScreen.storyboard */,
 				65DFBE1528A50EC900FB314C /* Info.plist */,
@@ -140,7 +155,12 @@
 			files = (
 				65DFBE0C28A50EC900FB314C /* ViewController.swift in Sources */,
 				65DFBE0828A50EC900FB314C /* AppDelegate.swift in Sources */,
+				65DFBE1C28A5109D00FB314C /* PersonTableViewCell.swift in Sources */,
+				65DFBE2828A521E400FB314C /* PhoneBook.xcdatamodeld in Sources */,
+				65DFBE1E28A5130E00FB314C /* CreatePersonVC.swift in Sources */,
+				65499B7F28A5706F00D5EBCF /* UpdateVC.swift in Sources */,
 				65DFBE0A28A50EC900FB314C /* SceneDelegate.swift in Sources */,
+				65DFBE2228A5132700FB314C /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65DFBE2628A521E400FB314C /* PhoneBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				65DFBE2728A521E400FB314C /* PhoneBook.xcdatamodel */,
+			);
+			currentVersion = 65DFBE2728A521E400FB314C /* PhoneBook.xcdatamodel */;
+			path = PhoneBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 65DFBDFC28A50EC900FB314C /* Project object */;
 }
