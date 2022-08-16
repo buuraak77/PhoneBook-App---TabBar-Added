@@ -40,6 +40,9 @@ class CreatePersonVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             alert.addAction(ok)
             present(alert, animated: true)
+            
+            nameTextField.text = ""
+            numberTextField.text = ""
         }
         
         

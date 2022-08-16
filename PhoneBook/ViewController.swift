@@ -12,9 +12,13 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 
 class ViewController: UIViewController {
+    
     let context = appDelegate.persistentContainer.viewContext
     
     var selectedPerson: Person?
+    
+    var favPersonlist = [Person]()
+    
     
     var personList = [Person]()
     
@@ -25,6 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "PhoneBook"
         
         self.hideKeyboardWhenTappedAround()
         
@@ -130,8 +135,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, DetailButt
             self.getPerson()
             self.tableView.reloadData()
         }
+        
+        
+        let favori = UITableViewRowAction(style: .normal, title: "Add To Favorite") { UITableViewRowAction, IndexPath in
+            let person = self.personList[IndexPath.row]
+            
+            let favPerson = FavPerson(context: self.context)
+            favPerson.favperson_name = person.person_name
+            favPerson.favperson_number = person.person_number
+            appDelegate.saveContext()
+                
+            let alert = UIAlertController(title: "DONE!", message: "\(person.person_name!) Succesfully Added To Favorites", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+            
+        }
 
-        return [delete]
+        return [favori,delete]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
